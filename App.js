@@ -5,74 +5,75 @@
  */
 
 import React, { Component } from 'react';
-import {Drawer} from 'native-base';
-import {Container,Header,Content,footer,Footertab,Button,Icon,Card,CardItem,Thumbnail} from 'native-base';
-export default class App extends Component{
-  render(){
-    return(
+import {Container,Header,Content,Card,CardItem,Button,Icon,Text,Tab,Tabs,TabHeading} from 'native-base';
+import Tab1 from './tabOne';
+import Tab2 from './tabTwo';
+import Tab3 from './tabThree';
+import Tab4 from './tabFour';
+
+
+export default class tw3 extends Component {
+  render() {
+    return (
       <Container>
         <Header />
         <Content>
-          <Card>
+          <Button iconLeft transparent primary>
+          <Icon name='home' />
+          <Text> Home </Text>
+          </Button>
+          <Tabs>
+            <Tab heading={ <TabHeading><Icon name="home" /></TabHeading>}>
+            <Tab1 />
             <CardItem>
-              <Left>
-                <Body>
-                  <Text> Bala </Text>
-                  <Text Note> @Bala </Text>
-                  </Body>
-                  </Left>
-                  </CardItem>
-
-                  
-                  
-                  <CardItem>
-                  <Button iconLeft transparent>
-                  <Icon name='profile'/>
-                  <Text> Profile </Text>
-                  <Icon name='lists'/>
-                  <Text> Lists </Text>
-                  <Icon name='power'/>
-                  <Text> Moments </Text>
-                  <Icon name='beer'/>
-                  <Text> Highlights </Text>
-                  </Button>
-                  </CardItem>
-                  <CardItem>
-                  <Button transparent Settings and Privacy>
-                  <Text> Settings and Privacy </Text>
-                  </Button>
-                  <Button transparent Help Center>
-                  <Text> Help Center </Text>
-                  </Button>
-                  </CardItem>
-                  </Card>
-
-                  <Footer>
-                    <FooterTab>
-                      <Button>
-                        <Icon name="moon" />
+              <Body>
+                <Text> Bala </Text>
+                <Text note> Hasura is amazing </Text>
+                </Body>
+                </CardItem>
+                <CardItem>
+                  <Body>
+                    <Text>
+                      I'm feeling so greatful to be a part of Hasura Product Development Fellowship.
+                      </Text>
+                      </Body>
+                      
+                      <Left>
+                        <Button transparent textStyle={{color: '87838B'}}>
+                        <Icon name="logo-messages" />
+                        <Text> 60 </Text>
                         </Button>
-                        <Button>
-                          <Icon name="apps"/>
-                          </Button>
-                          </FooterTab>
-                          </Footer>
-                          </Content>
-                          </Container>
+                        </Left>
+                        
+                        <Button iconRight light>
+                        <Icon name="beer" />
+                        <Text> 700 </Text>
+                        </Button>
+                        </CardItem>
+                        
+
+
+
+            </Tab>
+            <Tab heading={ <TabHeading><Icon name="ios-search"/></TabHeading>}>
+              <Tab2 />
+              </Tab>
+              <Tab heading={<TabHeading><Icon name="bell"/></TabHeading>}>
+              <Tab3 />
+              </Tab>
+              <Tab heading={<TabHeading><Icon name="letter"/></TabHeading>}>
+              <Tab4 />
+              </Tab>
+              </Tabs>
+              </Content>
+              </Container>
     );
   }
 }
 
-                        
 
-                        
+      
 
-                  
-
-
-                  
-
-                   
 
 
   
